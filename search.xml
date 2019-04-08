@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Intellij-IDEA使用技巧]]></title>
+    <url>%2F2018%2F01%2F27%2FIntellij-IDEA%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
+    <content type="text"><![CDATA[快捷键相关IDEA 支持快捷键组，比如ctrl+l,k，按下ctrl+l然后按下k触发命令，可以配置常用到的但是没有快捷键的命令进行配置，有些预设的快捷键很少用到，可以移除原有的命令，设置新的，比如ctrl+l，ctrl+m等，通过快捷键组可以配置多个快捷键]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>JetBrains</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo博客配置]]></title>
+    <url>%2F2018%2F01%2F27%2FHexo%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[博客搭建 配置文件说明hexo安装之后有一个_config.yml,这个是站点配置文件,在主目录下面next安装之后也有一个同名文件,这个是主题配置文件,在next目录下面 安装hexo以及插件安装hexo1sudo npm install hexo-cli -g 初始化目录1hexo init 123456# 部署插件npm install hexo-deployer-git --save# feed插件npm install hexo-generator-feed --save# 搜索插件npm install hexo-generator-searchdb --save hexo基本命令1234567891011121314151617181920212223# 初始化hexo init# 生成静态文件hexo generatehexo g# 删除静态文件hexo cleanhexo c# 本地运行hexo serverhexo s# 部署hexo deployhexo d# 新建一个post,在source/_posts目录下hexo new post $title# 新建一个page,生成一个$title文件夹,同时在这个文件夹下生成index.md文件,对应/$title显示的内容hexo new page $title# 新建一个草稿hexo new draft $title 站点配置修改语言1language: zh-Hans 修改站点url1url: https://unlimitedloop.github.io/ 部署配置1234deploy: type: git repo: github: git@github.com:unlimitedLoop/unlimitedLoop.github.io.git 搜索配置12345search: path: search.xml field: post format: html limit: 10000 安装next主题12cd your-hexo-sitegit clone https://github.com/iissnan/hexo-theme-next themes/next 启用next主题编辑站点配置文件1theme: next 生成自己的favicon.ico放在next目录下的source文件夹 启用菜单,编辑主题配置文件1234567891011121314151617181920# 菜单路径menu: home: / categories: /categories/ about: /about/ archives: /archives/ tags: /tags/ #sitemap: /sitemap.xml #commonweal: /404.html# 菜单图标,对应Font Awesomemenu_icons: enable: true # Icon Mapping. home: home about: user categories: th tags: tags archives: archive commonweal: heartbeat hexo读取source/_posts下的markdown文件生成博客 启用categories需要在source/categories下新建一个index.md文件,文件内容如下12345---title: categoriestype: categoriescomments: false--- 启用tags需要在source/tags下新建一个index.md文件12345---title: tagstype: "tags"comments: false--- 选择主题1scheme: Mist 侧边栏设置12345678910111213141516# Social linkssocial: GitHub: https://github.com/your-user-name Twitter: https://twitter.com/your-user-name 微博: http://weibo.com/your-user-name 豆瓣: http://douban.com/people/your-user-name 知乎: http://www.zhihu.com/people/your-user-name # 等等# Social Iconssocial_icons: enable: true # Icon Mappings GitHub: github Twitter: twitter 微博: weibo 头像设置1avatar: /images/colonel_mc_glitchface.jpg 动画设置12use_motion: truecanvas_nest: true disqus评论注册disqus，点击get start，然后选择I want to install disqus on my site，填入Website Name，然后在下方中的Your unique disqus URL will be的shortname.disqus.com填入1234disqus: enable: false shortname: count: true AddThis分享注册AddThis,下面菜单获得AddThis id：More.. --&gt; General --&gt; ID,然后新增一个share button,配置之后启用,填入id1add_this_id: put_your_add_this_id_here 本地搜索123# Local searchlocal_search: enable: true 文章显示摘要1excerpt_description: true 自定义404在source目录下生成404.html文件123456789101112131415161718---layout: falsetitle: "404"---&lt;!DOCTYPE HTML&gt;&lt;html&gt;&lt;head&gt; &lt;title&gt;404&lt;/title&gt; &lt;meta name="description" content="404错误，页面不存在！"&gt; &lt;meta http-equiv="content-type" content="text/html;charset=utf-8;"/&gt; &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /&gt; &lt;meta name="robots" content="all" /&gt; &lt;meta name="robots" content="index,follow"/&gt;&lt;/head&gt;&lt;body&gt; &lt;script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8" homePageUrl="/" homePageName="回到我的主页"&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; layout: false标识内容不需要Hexo生成而是直接使用文件内容 博客设置自定义首页文章截取可以在文件中手动加入&lt;!-- more --&gt;标识 Tips如果自定义网页不需要Hexo进行渲染，在文章首部指定layout: false，比如自定义的404页面 关于，分类，标签页面需要自己新增，通过指定type标识 标签： 12345---title: tagstype: "tags"comments: false--- 分类： 12345---title: categoriestype: "categories"comments: false---]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Intellij IDEA常用插件]]></title>
+    <url>%2F2017%2F12%2F18%2FIntellij-IDEA%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[介绍一下常用的Intellij IDEA插件 编辑增强IdeaVim可以在JetBrains系列中加入vim模式编辑功能，可以使用大多数vim命令操作，自定义配置文件在用户主目录下的.ideavimrc，需要自己创建，可以添加自己的配置1inoremap jk &lt;esc&gt; String Manipulation加入了一系列字符串风格转换功能，可以将数据库字段风格修改为驼峰风格，以及其他多种风格，默认快捷键是alt+shift+m 代码检查 CheckStyle-IDEA FindBugs-IDEA Alibaba Java Coding Guidelines SonarLint MetricsReloaded检查方法复杂度 参考文章 语言增强BashSupport实现bash脚本的补全与错误提示 Lua实现Lua语言的补全和提示 主题美化Material Theme UI简洁优美的主题以及对应的高亮方案 配置同步Settings Repository可以用于JetBrains各个产品之间的配置同步，可以指定一个git远程地址，用于保存配置，目前自动同步有些问题，可以通过settings-tools-settings repository-auto sync关闭选项，需要同步的时候手动处理 其他Free Mybatis plugin可以实现DAO文件到XML文件的跳转以及对应关系的检查，如果发现DAO方法在XML中没有对应的文件，会有红色错误提示，并且可以创建对应XML中的SQL语句 Grep Console根据关键字给控制台输出加上颜色，比如由Error的行就变成红色，Warn变成黄色等等 File Watchers在文件发生更改的时候执行某些动作 Save Actions在保存Java文件的时候触发编译，优化导入以及其他可配置的动作 Lombok Plugin使用Lombok生成POJO时，避免IDEA检查错误 Maven Helper树形结构可视化依赖以及依赖冲突提示和处理 Statistic项目代码文件类型分析 Mongo Plugin查询MongoDB JRebel for Intellij热加载扩展，注册My JRebel免费使用]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>JetBrains</tag>
+      </tags>
+  </entry>
+</search>
